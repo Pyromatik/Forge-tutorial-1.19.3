@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.pyromatik.tutorialmod.Item.ModCreativeModeTabs;
 import net.pyromatik.tutorialmod.Item.ModItems;
 import org.slf4j.Logger;
 
@@ -46,6 +47,12 @@ public class TutorialMod
     {
         if (event.getTab() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.BLACK_OPAL);
+            event.accept(ModItems.RAW_BLACK_OPAL);
+        }
+
+        if (event.getTab() == ModCreativeModeTabs.TUTORIAL_TAB){
+            event.accept(ModItems.BLACK_OPAL);
+            event.accept(ModItems.RAW_BLACK_OPAL);
         }
     }
 
